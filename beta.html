@@ -60,6 +60,7 @@
 <input type="hidden" name="_subject" value="Launch list sign-up: Mahjong World Tour">
 <input type="hidden" name="_template" value="table">
 <input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" id="nextUrl" value="">
 <div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
 <label for="email">Email</label>
 <input id="email" type="email" name="email" required autocomplete="email" inputmode="email" placeholder="you@example.com">
@@ -78,17 +79,10 @@
 <footer><div class="wrap"><a href="./">Home</a><a href="support.html">Support</a><a href="privacy.html">Privacy Policy</a><br><br>© 2026 Upside Technologies. Mahjong World Tour is published by Upside Technologies.</div></footer>
 <script>
 (function(){
-  var box=document.getElementById('beta'), f=document.getElementById('betaForm'), err=document.getElementById('err');
+  var box=document.getElementById('beta'), f=document.getElementById('betaForm');
   if(location.hash==='#thanks') box.classList.add('done');
-  f.addEventListener('submit',function(e){
-    if(!window.fetch||!window.FormData) return;           // old browsers: plain form post
-    e.preventDefault(); err.style.display='none';
-    var b=f.querySelector('button'); b.disabled=true; b.textContent='Sending...';
-    fetch(f.action.replace('formsubmit.co/','formsubmit.co/ajax/'),{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
-      .then(function(r){ return r.json().then(function(j){ if(!r.ok||String(j.success)!=='true') throw new Error(j.message||'failed'); }); })
-      .then(function(){ box.classList.add('done'); })
-      .catch(function(){ HTMLFormElement.prototype.submit.call(f); });   // fall back to a normal form post, which FormSubmit always handles (and which shows its activation notice the first time)
-  });
+  var nx=document.getElementById('nextUrl'); if(nx) nx.value=location.href.split('#')[0]+'#thanks';   // FormSubmit sends people back here after a normal form post
+  f.addEventListener('submit',function(){ var b=f.querySelector('button'); b.textContent='Sending...'; setTimeout(function(){ b.textContent='Notify me at launch'; },8000); });
 })();
 </script>
 </body></html>
