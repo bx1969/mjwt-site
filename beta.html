@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Join the beta · Mahjong World Tour</title>
+<meta name="description" content="Play Mahjong World Tour before launch. Sign up to be a beta tester on iPhone or iPad.">
+<meta property="og:title" content="Mahjong World Tour beta testers wanted"><meta property="og:description" content="Classic mahjong with a twist. Play before launch."><meta property="og:image" content="img/hero.jpg">
+<link rel="icon" href="img/favicon.png"><link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+<style>
+.beta{max-width:620px}
+.beta form{margin-top:10px}
+.beta label{display:block;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:20px 0 8px}
+.beta input[type=email],.beta input[type=text],.beta select{width:100%;padding:14px 16px;border-radius:12px;border:1px solid var(--line);background:#0b142a;color:var(--ink);font:400 17px Jost,-apple-system,Helvetica,Arial,sans-serif}
+.beta input:focus,.beta select:focus{outline:2px solid var(--gold);outline-offset:1px}
+.beta .check{display:flex;gap:12px;align-items:flex-start;text-transform:none;letter-spacing:0;font-size:16px;color:#dcd5c4;margin-top:22px}
+.beta .check input{width:20px;height:20px;margin-top:3px;accent-color:#d8b46c;flex:none}
+.beta button{margin-top:26px;border:0;cursor:pointer;font:500 17px Jost,-apple-system,Helvetica,Arial,sans-serif}
+.beta button[disabled]{opacity:.6;cursor:default}
+.beta .hint{font-size:14px;color:var(--mute);margin-top:6px}
+.beta .ok{display:none}
+.beta.done form{display:none}
+.beta.done .ok{display:block}
+.beta .err{color:#f3a59a;margin-top:14px;display:none}
+.beta ul.perks{list-style:none;padding:0;margin:18px 0 6px}
+.beta ul.perks li{padding-left:30px;position:relative;margin:8px 0}
+.beta ul.perks li:before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:500}
+.beta ol.steps{padding-left:22px}.beta ol.steps li{margin:6px 0}
+.beta .card{margin-top:40px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+</style>
+</head><body>
+<header class="nav"><div class="wrap"><img src="img/icon.png" alt=""><a class="brand" href="./">Mahjong World Tour</a>
+<nav><a href="./">Home</a><a href="beta.html" aria-current="page">Beta</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav></div></header>
+
+<main class="wrap doc beta" id="beta">
+<div class="intro">
+<div class="eyebrow">Beta testers wanted</div>
+<h1>Play before launch</h1>
+<p>Mahjong World Tour is classic mahjong with a twist: relaxing, soothing and still a real challenge, on a trip through 100 cities and the cultures behind them. Help test it on your iPhone or iPad before it reaches the App Store.</p>
+<ul class="perks">
+<li>Early access to every city and board</li>
+<li>No ads, just placeholders for now</li>
+<li>Your feedback shapes the launch</li>
+</ul>
+<p style="margin:26px 0 8px"><a class="btn" href="https://testflight.apple.com/join/CegRuDnz">Join the beta on TestFlight</a></p>
+<p class="small">Open this page on your iPhone or iPad. The link installs Apple's free TestFlight app, then the game.</p>
+<h3>How it works</h3>
+<ol class="steps">
+<li>Tap <b>Join the beta on TestFlight</b> on your iPhone or iPad.</li>
+<li>Install <b>TestFlight</b> from the App Store if you don't have it yet, then come back and tap the link again.</li>
+<li>Tap <b>Accept</b>, then <b>Install</b>. Mahjong World Tour appears on your home screen.</li>
+<li>Found a bug or have an idea? Take a screenshot in the game and TestFlight lets you send it straight to me.</li>
+</ol>
+</div>
+
+<div class="card" id="launch">
+<h3 style="margin-top:0">Want a heads-up at launch?</h3>
+<p style="margin-top:0">Leave your email and I'll let you know when Mahjong World Tour is live on the App Store. Optional, and nothing else.</p>
+<form id="betaForm" action="https://formsubmit.co/brandon.holbrookii@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="Launch list sign-up: Mahjong World Tour">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="false">
+<div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
+<label for="email">Email</label>
+<input id="email" type="email" name="email" required autocomplete="email" inputmode="email" placeholder="you@example.com">
+<label for="city">Your city <span style="text-transform:none;letter-spacing:0;color:var(--mute)">(optional)</span></label>
+<input id="city" type="text" name="city" autocomplete="address-level2" placeholder="Where should I send you first?">
+<button class="btn" type="submit">Notify me at launch</button>
+<div class="err" id="err">Something went wrong. Please try again, or email <a href="mailto:brandon.holbrookii@gmail.com?subject=Mahjong%20World%20Tour%20launch%20list">brandon.holbrookii@gmail.com</a>.</div>
+<p class="small" style="margin-top:18px">Your email is only used for the launch note. See the <a href="privacy.html#beta">privacy policy</a>.</p>
+</form>
+<div class="ok" id="thanks">
+<p style="margin:0"><b style="color:var(--gold2)">You're on the list.</b> I'll email you when the game is live. In the meantime, <a href="https://testflight.apple.com/join/CegRuDnz">jump into the beta</a>.</p>
+</div>
+</div>
+</main>
+
+<footer><div class="wrap"><a href="./">Home</a><a href="support.html">Support</a><a href="privacy.html">Privacy Policy</a><br><br>© 2026 Upside Technologies. Mahjong World Tour is published by Upside Technologies.</div></footer>
+<script>
+(function(){
+  var box=document.getElementById('beta'), f=document.getElementById('betaForm'), err=document.getElementById('err');
+  if(location.hash==='#thanks') box.classList.add('done');
+  f.addEventListener('submit',function(e){
+    if(!window.fetch||!window.FormData) return;           // old browsers: plain form post
+    e.preventDefault(); err.style.display='none';
+    var b=f.querySelector('button'); b.disabled=true; b.textContent='Sending...';
+    fetch(f.action.replace('formsubmit.co/','formsubmit.co/ajax/'),{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
+      .then(function(r){ return r.json().then(function(j){ if(!r.ok||String(j.success)!=='true') throw new Error(j.message||'failed'); }); })
+      .then(function(){ box.classList.add('done'); })
+      .catch(function(){ err.style.display='block'; b.disabled=false; b.textContent='Sign me up'; });
+  });
+})();
+</script>
+</body></html>
