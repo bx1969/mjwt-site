@@ -87,7 +87,7 @@
     fetch(f.action.replace('formsubmit.co/','formsubmit.co/ajax/'),{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
       .then(function(r){ return r.json().then(function(j){ if(!r.ok||String(j.success)!=='true') throw new Error(j.message||'failed'); }); })
       .then(function(){ box.classList.add('done'); })
-      .catch(function(){ err.style.display='block'; b.disabled=false; b.textContent='Sign me up'; });
+      .catch(function(){ HTMLFormElement.prototype.submit.call(f); });   // fall back to a normal form post, which FormSubmit always handles (and which shows its activation notice the first time)
   });
 })();
 </script>
